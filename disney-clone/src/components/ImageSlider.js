@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+
 const ImgSlider = (props) => {
   let settings = {
     dots: true,
@@ -54,7 +55,28 @@ const Carousel = styled(Slider)`
     }
   }
 
-  
+  ul li button {
+      &:before {
+          font-size: 10px;
+          color: rgb(158, 158, 171);
+      }
+  }
+
+  li.slick-active button:before {
+          font-size: 15px;
+          color: white;
+  }
+  .slick-list {
+      overfow: initial;
+  }
+
+  .slick-prev {
+      left: -75px;
+  }
+
+  .slick-next {
+      right: -75px;
+  }
 `;
 
 const Wrap = styled.div`
